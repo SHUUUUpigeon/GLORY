@@ -1,0 +1,66 @@
+<html>
+<head>
+<style>
+  #container {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .danmu {
+    position: absolute;
+    right: 0;
+    white-space: nowrap;
+    color: white;
+    font-size:48px
+   ;
+  }
+
+  @keyframes move {
+    from {right: 0;}
+    to {right: calc(100% + 2000px);}
+  }
+</style>
+</head>
+<body>
+<div id="container"></div>
+<script>
+// 定义一个函数用来创建和插入弹幕
+function createDanmu(text) {
+  // 创建一个span元素
+  var danmu = document.createElement("span");
+  // 设置其文本内容为参数值
+  danmu.innerText = text;
+  // 设置其类名为danmu
+  danmu.className = "danmu";
+
+    // 设置其随机的高度
+  danmu.style.top = Math.random() * (container.clientHeight - danmu.clientHeight) + "px";
+  // 设置其随机的颜色
+  danmu.style.color ="rgb(" + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + ")";
+  danmu.style.size = (100 + Math.random()*10 + "px");
+  // 将span元素插入到容器元素中
+  container.appendChild(danmu);
+  // 使用CSS动画来让span元素从右向左移动
+  danmu.style.animation = "move " + (20+ Math.random() * 3) + "s linear infinite";
+  
+  
+}
+
+// 获取容器元素
+var container = document.getElementById("container");
+// 定义一个数组用来存放一些弹幕内容
+var texts = ["妈的，我一场比赛几十万上下的身价，帮人刷埋骨之地的副本记录。不许说出去啊!说出去我弄死你", "叶秋出来PKPKPKPKPKPKPKPK","PKPKPKPKPKPKPKPK", "PK!!!!!!!!", "耍嘴皮子有什么意思，单挑啊！有人敢吗？竞技场走起啊，挑你们一百都木有问题啊！！！", "哈哈哈哈哈哈哈哈哈哈哈哈哈哈","你妹你妹你妹你妹你妹！！！","叶修你大爷！！","靠靠靠靠靠靠靠靠靠靠！","滚滚滚！","在我面前卖血卖成这样，你胆子也太大了，你已经忘记我是什么风格了吗？","是谁是谁是谁?跑什么,一群33级的,连我一个27级的小剑客都怕吗?我要是垃圾你们是不是连垃圾都不如？垃圾都不如是什么，是不可回收的垃圾，完全没有利用价值的废弃物！没错，就是正在逃跑的你们!1、2、3、4、5、6、7、8、9、10、11、12、13、14,14坨垃圾,跑得很整齐啊！排队求回收吗?但你们忘了你们是不能回收的吗?有点觉悟,挖个坑把自己埋了吧!不要再继续污染环境了,你们存在的每一秒钟......","嗯？刚才就是你吗？很好，居然也是一个剑客，不过看来你这个剑客和一般的剑客不大一样啊，看你这迫不及待冲出来领死的模样，难道你其实是传说中的……贱客？贱客贱客贱客贱客贱客贱客贱客贱客！","PK!PK!PK!PK!PK!下什么副本啊!!你有点职业素质，下副本那是你该干的事吗？快来竞技场，你需要高水平的对手帮你保持状态。","瀚文呐……你知道的，我的手是超快无比的，往往比我的意识还要快。操作是这样，有时候在看到一些问题时，也是这样。","你手里的大剑是强袭之剑吗?25级橙武,不错呀!不过你这样负重就比我高了哦,而且我告诉你，我身上除了一点点药剂，什么都没有哦！听好，是什么都没有。这是什么概念知道吗？这意味着你就算拔光了装备裸奔,也会被我追上的，你跑得再快也没有意义。你看，才这么几句话的功夫，我们的距离已经拉进不少了，你说你还跑什么呀,站住聊聊啊兄弟。想不想换换武器用用?30级光剑,蓝色品质,攻速10,用过它你就会爱上它,保证比你的大剑更顺手、更有爱……","以为贴符咒就能屏蔽垃圾话么太天真啦无论怎么样都屏蔽不了垃圾话的 垃圾话是一门语言艺术艺术你懂不懂简单的来说就是才艺和技术那可是用形象来反映现实但是又超脱于显示的一种社会意识形态 啥？你要问什么是社会意识形态？这个我也是听隔壁微草的王杰希说的话说那家伙说话神叨叨的不过不得承认说的还挺准你说我一广东人为啥会知道神叨叨是什么意思 我其实也不知道但是总听叶修说大眼神叨叨的叶修你也知道他说话10句话里九句半都不知道他想说什么大概就是什么地方的方言吧 至于哪里的方言我也不太知道北京话杭州话它都说的6到飞起那算什么?有本事来拼大粤语你以为贴符咒可以屏蔽我讲废话咩?就係太过天真喇无论点样都屏蔽唔到我讲水蛇春啦长噶喇讲废话都係一种语言艺术你明唔明啊你细个果阵有无睇TVB噶有无童回忆我分分钟几十万上落家阵用咁多时间同你讲野你要感恩啦感恩知唔知唔好怪我太坦白就凭你哋呢几件蛋散煎堆就想擺我条命未免太过儿戏啩!!!!!"];
+// 定义一个定时器，每隔一秒创建并插入一条弹幕
+setInterval(function() {
+  // 随机选择一个弹幕内容
+  var text = texts[Math.floor(Math.random() * texts.length)];
+  // 调用函数创建并插入弹幕
+  createDanmu(text);
+  
+},1000);
+</script>
+</body>
+</html>
